@@ -1,8 +1,8 @@
 {
-  "name": "Rocket-Bootcamp-Website",
+  "name": "rocket-bootcamp-practice",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/penspulse326/Rocket-Bootcamp-Website.git",
+  "repository": "https://github.com/penspulse326/rocket-bootcamp-practice.git",
   "author": "SHIN <akiyachiumi@gmail.com>",
   "license": "MIT",
   "devDependencies": {

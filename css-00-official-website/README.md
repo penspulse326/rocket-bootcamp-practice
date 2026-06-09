@@ -1,3 +1,3 @@
-# Rocket-Bootcamp-Website
+# rocket-bootcamp-practice
 
 node_modules
