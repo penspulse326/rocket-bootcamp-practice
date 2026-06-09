@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+
+  &:visited {
+    color: initial;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  color: $primary;
+  line-height: 1.5;
+}

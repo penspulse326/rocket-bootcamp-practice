@@ -1,0 +1,127 @@
+// login section
+.login {
+  @include lg {
+    padding: 40px 0;
+  }
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.login-list {
+  display: flex;
+  gap: 1px;
+
+  padding: 30px;
+
+  background-color: $secondary;
+
+  li {
+    flex-grow: 1;
+
+    height: 56px;
+
+    background-color: white;
+  }
+
+  a {
+    @include center;
+
+    padding: 12px;
+    height: 100%;
+  }
+
+  img {
+    max-height: 100%;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.login-left {
+  h2 {
+    padding: 30px 0;
+
+    background-color: $primary;
+
+    color: $secondary;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  @include lg {
+    width: 50%;
+  }
+}
+
+.login-right {
+  display: none;
+
+  @include lg {
+    display: block;
+
+    padding: 40px 30px;
+    width: 50%;
+    height: 350px;
+
+    background-color: $secondary;
+
+    h2 {
+      margin-bottom: 36px;
+
+      color: $p-color;
+      font-size: 24px;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  .login-list {
+    display: none;
+
+    @include lg {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      padding: 0;
+    }
+  }
+}
+
+// login input
+.login-form {
+  background-color: $primary;
+
+  input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    border: none;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+
+    color: $secondary;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+
+.login-form-wrapper {
+  padding: 30px;
+}

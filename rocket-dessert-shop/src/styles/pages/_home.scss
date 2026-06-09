@@ -1,0 +1,228 @@
+.root-homepage {
+  h2 {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+
+  .product-card:nth-child(1) {
+    .product-image {
+      background-image: url("https://images.unsplash.com/photo-1514517220017-8ce97a34a7b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c376ffa487bcd258df29dc881b10703&auto=format&fit=crop&w=700&q=60");
+    }
+  }
+
+  .product-card:nth-child(2) {
+    .product-image {
+      background-image: url("https://images.unsplash.com/photo-1525203135335-74d272fc8d9c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61b27d2cefd0dd094b5439f897b43bb7&auto=format&fit=crop&w=700&q=60");
+    }
+  }
+
+  .product-card:nth-child(3) {
+    .product-image {
+      background-image: url("https://images.unsplash.com/photo-1504473089979-b1c4993a9653?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9db69b72e1f7d1b4e5c81cee531108ff&auto=format&fit=crop&w=700&q=60");
+    }
+  }
+}
+
+// header
+.header-homepage {
+  img {
+    width: 100%;
+    max-height: 277px;
+
+    object-fit: cover;
+  }
+
+  @include lg {
+    img {
+      max-height: 500px;
+    }
+  }
+}
+
+.header-category-list {
+  display: flex;
+  gap: 1px;
+
+  li {
+    flex-grow: 1;
+
+    background-color: $primary;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 180px;
+
+    background-color: rgba($primary, 0.8);
+    backdrop-filter: blur(2px);
+
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+      background-color: rgb($yellow, 0.8);
+    }
+  }
+
+  li:nth-child(1) {
+    background-image: url("https://images.unsplash.com/photo-1490914327627-9fe8d52f4d90?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=73ed228f25bdefd2291c242f6d390fca&auto=format&fit=crop&w=600&q=60");
+  }
+  li:nth-child(2) {
+    background-image: url("https://images.unsplash.com/photo-1504114133367-631ecd3db3ca?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b75e93d90cd88467ae5715becb431a26&auto=format&fit=crop&w=600&q=60");
+  }
+  li:nth-child(3) {
+    background-image: url("https://images.unsplash.com/photo-1499638472904-ea5c6178a300?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c27da96f7150c96a92ba8a53c8644761&auto=format&fit=crop&w=600&q=60");
+  }
+
+  @include lg {
+    margin: -90px auto 60px auto;
+
+    a {
+      height: 256px;
+
+      font-size: 24px;
+    }
+  }
+}
+
+// intro
+.intro-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include lg {
+    flex-direction: row;
+
+    height: 420px;
+
+    background-color: $secondary;
+
+    &:nth-child(1) {
+      .slogan-quote {
+        content: url("../images/quote-1.svg");
+      }
+    }
+    &:nth-child(2) {
+      .slogan-quote {
+        content: url("../images/quote-2.svg");
+      }
+    }
+  }
+}
+
+.intro-card:nth-child(2) {
+  @include lg {
+    margin-top: 105px;
+
+    .slogan-quote {
+      order: 2;
+    }
+    .slogan-image {
+      order: 3;
+
+      margin-left: 42px;
+    }
+  }
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+
+  @include lg {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.slogan-text {
+  flex-grow: 1;
+  order: 3;
+
+  padding: 30px;
+
+  background-color: $secondary;
+
+  color: $p-color;
+  line-height: 2.25;
+  font-weight: 300;
+
+  @include lg {
+    order: 2;
+
+    padding: 0;
+    max-height: 280px;
+
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+}
+
+.slogan-image {
+  order: 2;
+
+  max-height: 250px;
+
+  object-fit: cover;
+
+  @include lg {
+    order: 1;
+
+    max-height: 460px;
+  }
+}
+
+.slogan-quote {
+  order: 1;
+
+  margin: 30px auto;
+
+  height: 60px;
+
+  @include lg {
+    align-self: flex-start;
+    order: 3;
+
+    margin-top: 0;
+    margin-left: 80px;
+    width: 90px;
+    height: auto;
+  }
+}
+
+.intro-quote {
+  margin: 30px auto 0 auto;
+  height: 60px;
+
+  @include lg {
+    content: url("../images/quote-3.svg");
+
+    margin: 95px auto 80px auto;
+    width: 90px;
+    height: auto;
+  }
+}
+
+// today-selected
+.today-selected {
+  margin-bottom: 80px;
+}

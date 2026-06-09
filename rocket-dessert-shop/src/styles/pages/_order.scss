@@ -1,0 +1,310 @@
+.order {
+  @include lg {
+    .row {
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+
+      margin: 30px auto 60px auto;
+    }
+
+    .title-bar {
+      margin-bottom: 0;
+
+      background-color: $secondary;
+
+      color: $p-color;
+    }
+
+    .cart-summary {
+      ul {
+        padding: 16px 20px 0 20px;
+        border: 1px solid $secondary;
+
+        color: $p-color;
+      }
+    }
+  }
+}
+
+.order-summary {
+  display: none;
+
+  @include lg {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.order-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 16px 20px;
+  border: 1px solid $secondary;
+
+  color: $p-color;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 20px;
+    width: 120px;
+    height: 80px;
+
+    object-fit: cover;
+  }
+
+  .order-item-title {
+    font-weight: 300;
+  }
+
+  .order-item-total {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.order-form {
+  background-color: $primary;
+}
+
+.order-form-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  width: 375px;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    color: $secondary;
+    font-size: 36px;
+  }
+
+  @include lg {
+    padding: 30px 40px;
+    width: initial;
+  }
+}
+
+.order-progress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 16px;
+  width: 153px;
+
+  li {
+    position: relative;
+
+    padding: 1px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $secondary;
+    border-radius: 50%;
+  }
+
+  li:nth-child(n + 2) {
+    border: 1px solid $p-color;
+  }
+
+  li:nth-child(-n + 2)::after {
+    position: absolute;
+    top: 7px;
+    left: 15px;
+
+    content: "";
+    width: 51px;
+    height: 1px;
+
+    background-color: $p-color;
+  }
+
+  span {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    background-color: $secondary;
+  }
+}
+
+.progress-pay {
+  li:first-child {
+    width: auto;
+    height: auto;
+
+    border: none;
+
+    span {
+      font-size: 20px;
+
+      background-color: transparent;
+    }
+  }
+
+  li:nth-child(2) {
+    border: 1px solid $secondary;
+  }
+
+  li:nth-child(1)::after {
+    width: 54px;
+    top: 10px;
+    left: 17px;
+    background-color: $secondary;
+  }
+}
+
+.progress-invoice {
+  li:nth-child(-n + 2) {
+    width: auto;
+    height: auto;
+
+    border: none;
+
+    span {
+      font-size: 20px;
+
+      background-color: transparent;
+    }
+  }
+
+  li:nth-child(3) {
+    border: 1px solid $secondary;
+  }
+
+  li:nth-child(1)::after {
+    width: 55px;
+    top: 10px;
+    left: 18px;
+    background-color: $secondary;
+  }
+
+  li:nth-child(2)::after {
+    width: 51px;
+    top: 10px;
+    left: 18px;
+    background-color: $secondary;
+  }
+}
+
+.order-input-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  li {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+
+    .title {
+      margin-bottom: 8px;
+
+      color: $secondary;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .input-wrapper {
+    margin-bottom: 0;
+
+    button {
+      margin-right: 6px;
+      color: $primary;
+
+      cursor: pointer;
+    }
+  }
+
+  .input-address {
+    flex-direction: column;
+  }
+
+  .input-address-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+}
+
+.invoice-toggle {
+  display: flex;
+
+  margin-bottom: 30px;
+  height: 56px;
+  border: 1px solid $secondary;
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    color: $secondary;
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
+  }
+
+  a {
+    @include center;
+
+    width: 100%;
+    height: 100%;
+
+    color: $secondary;
+  }
+}
+
+.toggled {
+  a {
+    background-color: $secondary;
+
+    color: $primary;
+  }
+}
+
+.invoice-paper-list {
+  li:first-child {
+    align-items: stretch;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      input {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

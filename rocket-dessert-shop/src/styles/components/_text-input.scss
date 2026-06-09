@@ -1,0 +1,32 @@
+.input-wrapper {
+  display: flex;
+
+  margin-bottom: 16px;
+  height: 56px;
+
+  background-color: $secondary;
+
+  span {
+    @include center;
+
+    width: 56px;
+    height: 56px;
+  }
+
+  input[type="text"] {
+    margin: 3px 0;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+
+    background-color: transparent;
+
+    color: $primary;
+    font-size: 16px;
+
+    &::-webkit-input-placeholder {
+      color: $p-color;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+nav {
+  padding: 30px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/student-week1/logotype-sm-dark.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1023px) {
+    width: 115px;
+  }
+
+  @include lg {
+    h1 {
+      height: 40px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/logo-all-dark.svg");
+    }
+  }
+}
+
+.btn-menu {
+  @include center;
+  flex-direction: column;
+  gap: 3px;
+
+  width: 24px;
+  height: 24px;
+
+  transition: 0.3s;
+
+  span {
+    display: inline-block;
+    width: 18px;
+
+    border-top: 2px solid $primary;
+  }
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.nav-menu {
+  display: none;
+  justify-content: flex-end;
+  flex-grow: 1;
+  gap: 60px;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+  }
+  a {
+    color: $primary;
+
+    transition: 0.3s;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  @include lg {
+    display: flex;
+  }
+}
+
+.btn-cart {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    fill: $primary;
+
+    transition: 0.3s;
+
+    &:hover {
+      fill: $yellow;
+    }
+  }
+
+  @include lg {
+    margin-left: 80px;
+  }
+}
