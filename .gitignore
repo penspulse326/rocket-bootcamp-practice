@@ -19,6 +19,7 @@ pnpm-debug.log*
 
 # Build outputs
 **/dist/
+!react-week3/dist/
 **/build/
 **/.cache/
 **/.parcel-cache/
