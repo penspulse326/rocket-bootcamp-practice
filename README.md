@@ -17,7 +17,7 @@
 * **js-final** ([資料夾](https://github.com/penspulse326/rocket-bootcamp-practice/tree/main/js-final) / [Demo](https://penspulse326.github.io/rocket-bootcamp-practice/js-final/index.html)) - JavaScript 期末專案
 
 ### ⚛️ React
-* **react-week3** ([資料夾](https://github.com/penspulse326/rocket-bootcamp-practice/tree/main/react-week3) / [Demo](https://penspulse326.github.io/rocket-bootcamp-practice/react-week3/dist/index.html)) - React 第三週練習專案 (已建置版本)
+* **react-week3** ([資料夾](https://github.com/penspulse326/rocket-bootcamp-practice/tree/main/react-week3) / [Demo](https://penspulse326.github.io/rocket-bootcamp-practice/react-week3/dist/)) - React 第三週練習專案 (已建置版本)
 
 ### 🛠️ Git
 * **git-00-flow-practice** ([資料夾](https://github.com/penspulse326/rocket-bootcamp-practice/tree/main/git-00-flow-practice) / [Demo](https://penspulse326.github.io/rocket-bootcamp-practice/git-00-flow-practice/index.html)) - Git Flow 分支管理與協作實務練習
