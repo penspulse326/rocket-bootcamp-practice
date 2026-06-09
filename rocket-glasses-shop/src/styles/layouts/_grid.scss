@@ -1,0 +1,63 @@
+// 固定每格間距
+$gutter: 24px;
+
+// 從 mobile 開板
+// 容器最大寬度減掉設計稿指定左右寬距 13px*2
+.container {
+  margin: 0 auto;
+  min-width: 348px;
+  max-width: calc(100% - 26px);
+}
+
+.container-fluid {
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+// 自適應容器
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// 格線設定
+@for $i from 1 through 4 {
+  $gutter-totalWidth: $gutter * ($i - 1);
+
+  .col-sm-#{$i} {
+    width: calc((100% - $gutter * 3) / 4 * $i + $gutter-totalWidth);
+  }
+}
+
+// 平板樣式
+@media (min-width: 768px) {
+  .container {
+    min-width: 376px;
+    max-width: calc(100% - 72px);
+  }
+
+  @for $i from 1 through 12 {
+    $gutter-totalWidth: $gutter * ($i - 1);
+
+    .col-md-#{$i} {
+      width: calc((100% - $gutter * 11) / 12 * $i + $gutter-totalWidth);
+    }
+  }
+}
+
+// PC 樣式
+@media (min-width: 1200px) {
+  .container {
+    min-width: 769px;
+    max-width: 1296px;
+    width: 95%;
+  }
+
+  @for $i from 1 through 12 {
+    $gutter-totalWidth: $gutter * ($i - 1);
+
+    .col-lg-#{$i} {
+      width: calc((100% - $gutter * 11) / 12 * $i + $gutter-totalWidth);
+    }
+  }
+}

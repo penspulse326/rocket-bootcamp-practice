@@ -1,0 +1,132 @@
+footer {
+  padding: 24px 0;
+
+  background-color: $primary;
+
+  color: white;
+
+  hr {
+    margin: 24px 0;
+
+    border-top: 0px solid white;
+
+    @include pad {
+      margin: 32px 0;
+
+      border-top: 1px solid white;
+    }
+  }
+
+  @include pad {
+    padding: 40px 0;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+  }
+
+  @include pad {
+    flex-direction: column;
+  }
+}
+
+.footer-menu {
+  display: none;
+
+  li {
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  @include pad {
+    display: flex;
+    gap: 48px;
+  }
+}
+
+.contact-sns {
+  display: flex;
+  gap: 8px;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include pad {
+    gap: 16px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  div {
+    margin-right: 8px;
+    margin-bottom: 0;
+
+    font-size: 24px;
+  }
+
+  @include pad {
+    div {
+      margin-right: 16px;
+      font-size: 48px;
+    }
+    span {
+      @include h3;
+      font-family: "Noto Sans TC", sans-serif;
+      font-weight: 400;
+    }
+  }
+}
+
+.term {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  a {
+    color: white;
+    font-size: 14px;
+  }
+
+  @include pad {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+
+    span {
+      flex-grow: 1;
+    }
+  }
+}

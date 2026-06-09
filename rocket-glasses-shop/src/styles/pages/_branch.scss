@@ -1,0 +1,202 @@
+.branch {
+  h2 {
+    text-align: left;
+
+    color: black;
+  }
+
+  @include desktop {
+    padding-top: 96px;
+  }
+}
+
+.branch-selector-wrapper {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+  width: 100%;
+
+  @include pad {
+    margin-bottom: 40px;
+
+    font-size: 24px;
+  }
+}
+
+.branch-selector {
+  flex: 1;
+
+  margin-left: 8px;
+  padding: 6px 12px;
+  max-width: 304px;
+  height: 38px;
+
+  background-color: transparent;
+
+  border: 1px solid grey;
+
+  @include pad {
+    margin-left: 16px;
+
+    padding: 0 12px;
+    font-size: 18px;
+  }
+}
+
+.branch-list {
+  gap: 24px;
+
+  img {
+    display: block;
+
+    min-height: 224px;
+
+    object-fit: cover;
+  }
+
+  h3 {
+    @include h4;
+
+    padding: 8px 24px;
+    border: 1px solid #00000020;
+
+    font-weight: 400;
+  }
+
+  a {
+    display: block;
+
+    padding: 16px 0;
+
+    background-color: black;
+
+    color: white;
+    font-size: 19px;
+    text-align: center;
+
+    transition: 0.3s;
+
+    &:hover {
+      background-color: grey;
+    }
+  }
+
+  @include desktop {
+    gap: 48px 24px;
+  }
+}
+
+.branch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 16px 24px;
+
+  border: 1px solid #00000020;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+  }
+
+  li:last-child {
+    align-items: flex-start;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      .hidden {
+        width: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .branch-icon {
+    margin-right: 8px;
+  }
+}
+
+// store page
+.store-wrapper {
+  @include desktop {
+    justify-content: space-between;
+    gap: 24px;
+  }
+}
+
+.store-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 24px;
+
+  img {
+    display: block;
+
+    height: 224px;
+
+    object-fit: cover;
+  }
+
+  @include pad {
+    gap: 24px;
+
+    img,
+    div {
+      flex-grow: 1;
+    }
+  }
+
+  @include desktop {
+    flex-direction: column;
+    gap: 0;
+
+    margin-bottom: 0;
+
+    img,
+    div {
+      width: 100%;
+    }
+  }
+}
+
+.store-info-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    @include h4;
+
+    padding: 8px 24px;
+    font-weight: 400;
+
+    border: 1px solid #00000020;
+  }
+
+  ul {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+
+.store-map {
+  margin-bottom: 24px;
+
+  iframe {
+    width: 100%;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+
+    iframe {
+      height: 100%;
+    }
+  }
+}

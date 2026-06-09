@@ -1,0 +1,80 @@
+.btn {
+  background-color: $primary;
+
+  color: white;
+ 
+  border: none;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $dark;
+  }
+}
+
+.btn-sm {
+  padding: 6px 12px;
+
+  font-size: 20px;
+}
+
+.btn-lg {
+  padding: 16px 0;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  transition: 0.3s;
+}
+
+.pagenation {
+  margin: 64px auto 0 auto;
+  max-width: 348px;
+
+  td {
+    padding: 12px;
+    height: 45px;
+
+    border: 1px solid #555555;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #f2f2f2;
+      color: black;
+    }
+  }
+
+  td:nth-child(2) {
+    background-color: black;
+    color: white;
+  }
+
+  @include pad {
+    margin-top: 80px;
+
+    td {
+      padding: 12px 16px;
+      height: 48px;
+    }
+  }
+}
+
+.page-title {
+  @include h4;
+
+  margin-left: -4px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+
+  border-left: 8px solid $primary;
+
+  @include pad {
+    @include h2;
+
+    margin-bottom: 32px;
+  }
+}

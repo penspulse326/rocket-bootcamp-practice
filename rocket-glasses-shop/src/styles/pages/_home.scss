@@ -1,0 +1,356 @@
+// homepage global
+.root-homepage {
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  @include pad {
+    h2 {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+// header
+.homepage-header {
+  padding: 144px 0;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header-sm.png");
+  background-size: cover;
+  background-position: center;
+
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  h2 {
+    margin-bottom: 4px;
+  }
+
+  @include pad {
+    padding: 296px 0;
+  }
+
+  @include desktop {
+    background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/home-header.png");
+  }
+}
+
+.homepage-header-title {
+  margin-bottom: 8px;
+
+  color: $dark;
+  text-align: right;
+
+  h2 {
+    @include h4;
+  }
+
+  @include pad {
+    margin-bottom: 4px;
+
+    h2 {
+      @include h1;
+    }
+    h3 {
+      @include h3;
+      font-weight: 400;
+    }
+  }
+}
+
+// introduction section
+.intro {
+  background-color: $secondary;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+}
+
+.intro-list {
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 24px;
+
+  li {
+    @include flex-center;
+    flex-direction: column;
+  }
+  img {
+    width: 100px;
+  }
+  h3 {
+    @include h4;
+    margin-top: 1rem;
+
+    color: $dark;
+  }
+  p {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+}
+
+// category section
+.category {
+  ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  li {
+    transition: 0.3s;
+
+    &:hover {
+      -webkit-filter: sepia(1);
+
+      h3 {
+        color: grey;
+      }
+    }
+  }
+
+  img {
+    display: block;
+
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    @include roboto-title;
+    text-align: center;
+
+    transition: 0.3s;
+  }
+
+  @include desktop {
+    ul {
+      flex-direction: row;
+    }
+  }
+}
+
+// collaboration section
+.co-branding {
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/index-bg-sm.png");
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    color: white;
+  }
+}
+
+.co-branding-list {
+  gap: 24px;
+
+  img {
+    display: block;
+
+    width: 100%;
+  }
+  h3 {
+    @include roboto-title;
+
+    background-color: white;
+
+    text-align: center;
+  }
+
+  @include pad {
+    img {
+      height: 240px;
+
+      object-fit: cover;
+    }
+  }
+  @include desktop {
+    gap: 0;
+
+    li {
+      flex-grow: 1;
+    }
+
+    h3 {
+      padding: 8px 0;
+    }
+  }
+}
+
+// comment section
+.comment-list {
+  gap: 16px;
+
+  li {
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px #00000029;
+
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: 306px;
+
+    object-fit: cover;
+  }
+
+  p {
+    margin-top: 8px;
+  }
+
+  @include pad {
+    gap: 24px;
+  }
+}
+
+.comment-info {
+  display: flex;
+  flex-direction: column;
+
+  padding: 16px;
+  min-height: 205px;
+
+  span {
+    font-family: "Noto Sans TC";
+    font-weight: 500;
+  }
+
+  p {
+    flex-grow: 1;
+  }
+}
+
+.comment-date {
+  color: #707070;
+  font-size: 14px;
+}
+
+// response
+.response {
+  background-color: $secondary;
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    h2 {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.response-form {
+  margin-top: 24px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    margin: 0 auto;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    div {
+      margin-bottom: 8px;
+    }
+
+    input {
+      padding: 6px 12px;
+
+      background-color: transparent;
+      border: 1px solid black;
+
+      font-size: 16px;
+    }
+  }
+
+  li:nth-last-child(1) {
+    flex-direction: row;
+    align-items: center;
+
+    span {
+      margin-left: 8px;
+    }
+  }
+
+  textarea {
+    resize: none;
+
+    height: 136px;
+
+    background: transparent;
+    border: 1px solid black;
+  }
+
+  .btn {
+    display: block;
+    margin-top: 24px;
+
+    @include pad {
+      margin-top: 48px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// custom checkbox style
+.custom-checkbox-label {
+  width: 20px;
+  height: 20px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input:checked ~ .checkbox {
+    background-color: black;
+
+    &::after {
+      content: "\2714"; /* Unicode 打勾字符 */
+      font-size: 16px;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 3px;
+
+  cursor: pointer;
+}

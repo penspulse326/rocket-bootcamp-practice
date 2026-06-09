@@ -1,0 +1,226 @@
+// header style
+.products-header {
+  text-align: center;
+
+  h2 {
+    padding: 16px 0;
+
+    font-weight: 500;
+  }
+}
+
+.category-list {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 -15px;
+  width: 100vw;
+
+  li {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    height: 56px;
+    border: 1px solid #dcdcdc;
+
+    transition: 0.3s;
+
+    &:hover {
+      border-bottom: 8px solid rgba(170, 6, 0, 0.5);
+    }
+  }
+
+  li:first-child {
+    border-bottom: 8px solid $primary;
+  }
+
+  a {
+    color: black;
+  }
+
+  @include pad {
+    margin: 0 -51px;
+
+    h2 {
+      @include h4;
+      font-weight: 500;
+    }
+
+    li {
+      height: 68px;
+    }
+  }
+
+  @include desktop {
+    .container-fluid {
+      padding: initial;
+    }
+  }
+}
+
+.category-img-list {
+  display: flex;
+
+  width: 100%;
+
+  li {
+    width: 50%;
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    max-height: 296px;
+
+    object-fit: cover;
+  }
+
+  @include pad {
+    img {
+      height: 296px;
+    }
+  }
+
+  @include desktop {
+    .category-img-1 {
+      content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-1.png");
+    }
+    .category-img-2 {
+      content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-2.png");
+    }
+    .category-img-3 {
+      content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-3.png");
+    }
+    .category-img-4 {
+      content: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/product-header-4.png");
+    }
+  }
+}
+
+// list style change for product-2
+.product-2 {
+  .category-list {
+    li {
+      border: 1px solid #dcdcdc;
+    }
+    li:nth-child(2) {
+      border-bottom: 8px solid $primary;
+    }
+  }
+}
+
+// product list
+.products-menu {
+  text-align: center;
+
+  h3 {
+    margin: 0 auto;
+
+    @include h4;
+  }
+
+  .products-title-en {
+    font-weight: 500;
+  }
+
+  .products-title-tw {
+    margin-bottom: 24px;
+
+    font-weight: 400;
+  }
+
+  @include pad {
+    .products-title-en {
+      font-size: 42px;
+    }
+
+    .products-title-tw {
+      margin-bottom: 32px;
+
+      font-size: 32px;
+    }
+  }
+}
+
+.products-menu-list {
+  gap: 24px;
+
+  li:nth-child(n + 6):nth-child(-n + 12) {
+    display: none;
+  }
+
+  img {
+    display: block;
+
+    width: 100%;
+    height: 168px;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @include pad {
+    gap: 40px 24px;
+
+    li:nth-child(n + 6):nth-child(-n + 10) {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    gap: 80px 24px;
+  }
+}
+
+.sunglass {
+  img {
+    height: 224px;
+  }
+}
+
+.product-info {
+  @include h4;
+
+  display: flex;
+  justify-content: space-between;
+
+  span:first-child {
+    font-weight: 400;
+  }
+
+  span:last-child {
+    color: $primary;
+    font-weight: 500;
+  }
+}
+
+.product-color {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: inline-block;
+
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    &:first-child {
+      background-color: #5f3e2d;
+    }
+
+    &:last-child {
+      background-color: #b75929;
+    }
+  }
+}

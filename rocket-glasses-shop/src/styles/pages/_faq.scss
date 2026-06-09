@@ -1,0 +1,33 @@
+.faq {
+  font-family: "Noto Sans TC", sans-serif;
+
+  h2 {
+    color: black;
+    text-align: left;
+  }
+
+  h3 {
+    @include h5;
+
+    margin-bottom: 8px;
+
+    white-space: nowrap;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  @include desktop {
+    padding-top: 96px;
+  }
+}
+
+.faq-title {
+  @include h4;
+
+  margin-bottom: 24px;
+}
