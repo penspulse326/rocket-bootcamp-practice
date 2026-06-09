@@ -1,5 +1,3 @@
-# Rocket Bootcamp Projects
-
 我在火箭隊期間的練習。
 
 ---
